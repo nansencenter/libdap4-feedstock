@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [[ $(uname) == Darwin ]]; then
+  export LIBRARY_SEARCH_VAR=DYLD_FALLBACK_LIBRARY_PATH
+elif [[ $(uname) == Linux ]]; then
+  export LIBRARY_SEARCH_VAR=LD_LIBRARY_PATH
+fi
+
+
 export LDFLAGS="-L$PREFIX/lib $LDFLAGS"
 export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
 
@@ -12,8 +19,5 @@ bash configure --prefix=$PREFIX \
 
 
 make
-# make check fails on os x for some reason.
-#if [[ "$OSTYPE" == "linux-gnu" ]]; then
-make check
-#fi
+eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
 make install
