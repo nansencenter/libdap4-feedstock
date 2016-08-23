@@ -30,6 +30,6 @@ script:
 addons:
   artifacts:
     paths:
-    - /Users/travis/miniconda3/conda-bld/work/libdap4-version-3.18.0/tests/DASTest.log
-    - /Users/travis/miniconda3/conda-bld/work/libdap4-version-3.18.0/tests/DMRTest.log
-    - /Users/travis/miniconda3/conda-bld/work/libdap4-version-3.18.0/config.log
+    - /Users/travis/miniconda3/conda-bld/work/libdap4-version-3.18.1/tests/DASTest.log
+    - /Users/travis/miniconda3/conda-bld/work/libdap4-version-3.18.1/tests/DMRTest.log
+    - /Users/travis/miniconda3/conda-bld/work/libdap4-version-3.18.1/config.log
