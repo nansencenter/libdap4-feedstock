@@ -22,5 +22,9 @@ make
 ls -l /Users/travis/miniconda3/conda-bld/work
 ls -l /Users/travis/build/nansencenter/libdap4-feedstock
 ls -l /Users/travis/build/nansencenter/libdap4-feedstock/recipe
-#eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
+eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check || true
+ls -l /Users/travis/miniconda3/conda-bld/work
+ls -l /Users/travis/build/nansencenter/libdap4-feedstock
+ls -l /Users/travis/build/nansencenter/libdap4-feedstock/recipe
+find / -name DMRTest.log 2> /dev/null
 make install
