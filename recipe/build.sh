@@ -19,5 +19,6 @@ bash configure --prefix=$PREFIX \
 
 
 make
+ls /Users/travis/miniconda3/conda-bld/work
 eval ${LIBRARY_SEARCH_VAR}=$PREFIX/lib make check
 make install
