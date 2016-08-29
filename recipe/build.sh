@@ -13,9 +13,7 @@ export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
 autoreconf --force --install
 
 bash configure --prefix=$PREFIX \
-               --enable-threads=pth \
-               --with-xml2=$PREFIX \
-               --with-curl=$PREFIX \
+               --enable-threads=pth
 
 
 make
