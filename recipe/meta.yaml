@@ -22,12 +22,12 @@ requirements:
     - flex
     - bison
     - libuuid
-    - libxml2
-    - curl
+    - libxml2 [linux]
+    - curl [linux]
   run:
     - libuuid
-    - libxml2
-    - curl
+    - libxml2 [linux]
+    - curl [linux]
 
 test:
   commands:
